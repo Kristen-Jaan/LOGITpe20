@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+html {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+    --main-color: rgba(250, 21, 21, 0.548);
+    --second-color: rgba(190, 178, 178, 0.877);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, var(--main-color), var(--second-color)), url("../Picture/Background\ image\ 1.jpg");
+    clip-path: polygon(5% 0, 94% 0, 100% 100%, 0% 100%);
+}
+
+.header__text-box {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    transform: translate(-4%, -4%);
+    text-align: center;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    animation: FadeIn 3s;
+}
+
+@keyframes FadeIn {
+    0% {opacity: 0;}
+
+    100% {opacity: 1;}
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 1.6rem;
+    animation: MoveInFromLeft 3s ease-out;
+}
+
+@keyframes MoveInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section-about {
+    background-color: var(--main-color);
+    padding: 30rem 0;
+    margin-top: -0.5rem;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    height: 30vh;
+    padding: 2rem;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: auto 0;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--second-color), var(--main-color));
+    -webkit-background-clip: text;
+    transition: all 0.5s;
+
+}
+
+.heading-secondary:hover {
+    transform: skewY(-4deg) skewX(10deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.8);
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.section-about p {
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+
+}
+
+.btn-text:link, .btn-text:visited {
+    font-size: 1.4rem;
+    color: var(--second-color);
+    text-decoration: none;
+    border-bottom: 0.2rem solid var(--main-color);
+    display: inline-block;
+    padding: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn-text:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    transform: translateY(-3px);
+}
+
+.btn-text:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    transform: translateY(5px);
+}
+
+.composotion {
+    position: relative;
+}
+
+.composition_photo {
+    width: 20%;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 10;
+    outline-offset: 0.5rem;
+    transition: all 0.3s;
+}
+
+.composition_photo:hover {
+    outline: 1rem solid var(--second-color);
+    transform: scale(1.05) translate(-0.5rem);
+    box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.section-features {
+    height: 70vh;
+    background-image: linear-gradient(to right bottom, var(--main-color), var(--second-color)), url("../Picture/background\ image\ 2.jpg");
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    background-size: cover;
+    padding: 3rem 0;
+    margin-top: -12rem;
+    background-color: var(--main-color);
+}
+
+.column-1-of-4 {
+    float: left;
+    width: 25%;
+    height: 300px;
+    padding: 2rem;
+}
+
+.feature-box {
+    background-color: var(--main-color);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.05);
+}
+
+.feature.box h3, p {
+    color: var(--second-color);
+}
+
+.feature-box i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--main-color), var(--second-color));
+    -webkit-background-clip: text;
+    color: transparent;
+}
